@@ -1,0 +1,6 @@
+class SLL {
+
+    addFront(value) {
+        
+    }
+}
