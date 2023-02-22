@@ -49,6 +49,15 @@ class SLL {
         }
         
     }
+    display() {
+        if(this.head == null) {
+            return null;
+        }
+        
+        for()//loop through all nodes in the list and display their values
+        //
+
+    }
 }
 
 var mySLL = new SLL();
