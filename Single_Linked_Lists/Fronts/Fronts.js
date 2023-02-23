@@ -50,19 +50,29 @@ class SLL {
         
     }
     display() {
-        if(this.head == null) {
-            return null;
+        var newString = ""; //creates an empty string to start with
+
+        if(this.head == null) {  // base case
+            return "Empty List";
         }
         
-        for()//loop through all nodes in the list and display their values
-        //
-
+        newString += this.head.value;//Concatenates the first value in the list
+        var runner = this.head.next; // our runner will start at the second node of the list
+        
+        while (runner != null) { // while runner exists/ is not null
+            newString += ", "+ runner.value; // we'll take our string, add a comma, and add the new value to our string
+            runner = runner.next;// we will then iterate to the next node on the list
+        }
+        return newString; //as the loop ends, return the results
     }
 }
 
 var mySLL = new SLL();
+
 mySLL.addFront(10);
 mySLL.addFront(5);
+
 mySLL.addFront(3);
-mySLL.removeFront();
-console.log(mySLL);
+console.log(mySLL.display());
+// mySLL.removeFront();
+// console.log(mySLL);
